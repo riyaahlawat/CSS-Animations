@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Animation</title>
+    <style>
+        .cloud :nth-child(1) {
+            height: 150px;
+            opacity: 1;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            animation: sizeCloud 10s linear infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes sizeCloud {
+            from {
+                scale: 0.5;
+            }
+            to {
+                scale: 1;
+            }
+        }
+
+        .file-img {
+            position: fixed;
+            bottom: 50px; 
+            height: 100px;
+            opacity: 0.4;
+            animation: translateFile 10s linear infinite;
+
+        }
+        .file-img2 {
+            position: fixed;
+            bottom: 30px; 
+            height: 100px;
+            opacity: 0;
+            animation: translateFile 10s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes translateFile {
+            from {
+                transform: translateX(50vw); 
+                opacity: 0.8;
+            }
+            to {
+                transform: translateX(90vw); 
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/file.png" class="file-img">
+    <img src="./images/file.png" class="file-img2">
+    <div class="cloud">
+        <img src = "./images/cloud2.png";>
+    </div>
+</body>
+</html>
